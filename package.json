@@ -1,0 +1,28 @@
+{
+  "name": "notes-taking-app",
+  "version": "1.0.0",
+  "description": "A simple app that allows a logged in user to take and save notes",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "express-handlebars": "^4.0.4",
+    "fs": "0.0.1-security",
+    "jest": "^26.0.1",
+    "knex": "^0.21.1",
+    "pg": "^8.2.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Note",
+    "App"
+  ],
+  "author": "Thomas Corbin",
+  "license": "ISC",
+  "devDependencies": {
+    "supertest": "^4.0.2"
+  }
+}

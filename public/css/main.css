@@ -1,0 +1,78 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.min-height-100{
+    min-height: 100vh;
+}
+
+.card{
+    padding: 3px;
+    background-color: rgba(0,0,0,0);
+}
+
+.white-border{
+    border-color: rgb(255, 255, 255);
+}
+
+.light-grey-color{
+    color: rgb(250, 250, 250);
+}
+
+.bg-light-grey{
+    background-color: rgb(250, 250, 250);
+}
+
+.bg-white{
+    background-color: rgb(255, 0, 0);
+}
+
+.btn{
+    text-transform: none;
+}
+
+.btn-height{
+    height: 30px;
+}
+
+.btn-submit {
+    width: 30px;
+}
+
+.color-red{
+    color: rgba(255,0,0,1);
+}
+
+.note-heading{
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    margin-bottom: 0.15rem;
+    font-weight: 1.2;
+    line-height: 1.2;
+}
+
+.note-input{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    outline-color: rgba(0,0,0,0);
+}
+
+.note-textbox{
+    width: 100%;
+}
+
+#toolbar{
+    border: 0px;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+#notes{
+    overflow-y: auto;
+}

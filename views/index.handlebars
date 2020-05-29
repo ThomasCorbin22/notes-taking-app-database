@@ -1,0 +1,142 @@
+<div class="container-fluid p-0 min-height-100">
+    <div class="row m-0 min-height-100">
+        <div class="col-lg-2 col-md-3 col-sm-12 text-white bg-success p-0 d-flex flex-column">
+            <div class="row d-block m-0 p-2 pt-3">
+                <h4 class="text-white">Welcome {{user}}</h4>
+                <p id='number'>You have {{number}} notes:</p>
+                <form class="d-flex">
+                    <input id='search-bar' class="form-control btn-height p-1 flex-grow" type="text"
+                        placeholder="Search">
+                    <button id='search-button' class="btn-submit btn-height btn btn-secondary p-1 ml-auto"
+                        type="submit"><i id='search-icon' class="fa fa-search"></i></button>
+                </form>
+                <hr class='white-border'>
+            </div>
+
+            <div id='addNote' class="card btn btn-success text-left">
+                <div class="card-body p-1 py-2 bg-success">
+                    <h6 class="card-title mb-0">Add a new note</h6>
+                </div>
+            </div>
+
+            <div id='notes' class='notes mb-3 flex-grow-1'>
+                {{#each notes}}
+                <div id={{id}} class="note card btn btn-success text-left">
+                    <div class="card-body p-1 bg-success">
+                        <h5 class="thumb-title card-title mb-0">{{title}}</h5>
+                        <p class="thumb-content card-text mb-0 light-grey-color">{{content}}</p>
+                        <small class="thumb-date card-text light-grey-color">{{date}}</small>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-9 col-sm-12 bg-light-grey d-flex flex-column pb-3">
+            <div class="row d-block m-0 p-2 pt-3">
+                <form>
+                    <input id='main-title' class='d-block note-heading note-input' type='text' value=""></input>
+                    <p id='main-date'></p>
+                </form>
+                <!-- Create toolbar container -->
+                <div id="toolbar" class='p-0'>
+                    <!-- Add subscript and superscript buttons -->
+                    <button id='save' class="btn-submit btn-height btn btn-secondary d-flex align-items-center"><i
+                            class="far fa-save"></i></button>
+                    <button id='delete'
+                        class="btn-submit btn-height btn btn-secondary color-red d-flex align-items-center"><i
+                            class="fas fa-times"></i></button>
+                    <!-- Add font size and type dropdown -->
+                    <div class="ql-formats mr-3">
+                        <select class="ql-font">
+                            <option selected>Sans Serif</option>
+                            <option value="serif">Serif</option>
+                            <option value="monospace">Monospace</option>
+                        </select>
+                        <select class="ql-size">
+                            <option value="small"></option>
+                            <option selected></option>
+                            <option value="large"></option>
+                            <option value="huge"></option>
+                        </select>
+                    </div>
+                    <!-- Add a bold, italic, underline, strike-through, subscript and superscript button -->
+                    <div class="ql-formats mr-3">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                        <button class="ql-script" value="sub"></button>
+                        <button class="ql-script" value="super"></button>
+                        <button class="ql-link"></button>
+                    </div>
+                    <!-- Add colour buttons -->
+                    <div class="ql-formats mr-3">
+                        <select class="ql-color">
+                            <option value="rgb(25, 25, 25)"></option>
+                            <option value="rgb(153, 153, 153)"></option>
+                            <option value="rgb(255, 255, 255)"></option>
+                            
+                            <option value="rgb(255, 0, 0)"></option>
+                            <option value="rgb(255, 153, 153)"></option>
+                            <option value="rgb(255, 153, 0)"></option>
+                            <option value="rgb(255, 255, 0)"></option>
+                            <option value="rgb(255, 0, 153)"></option>
+                            <option value="rgb(255, 0, 255)"></option>
+
+                            <option value="rgb(0, 255, 0)"></option>
+                            <option value="rgb(153, 255, 153)"></option>
+                            <option value="rgb(153, 255, 0)"></option>
+                            <option value="rgb(255, 255, 0)"></option>
+                            <option value="rgb(0, 255, 153)"></option>
+                            <option value="rgb(0, 255, 255)"></option>
+
+                            <option value="rgb(0, 0, 255)"></option>
+                            <option value="rgb(153, 153, 255)"></option>
+                            <option value="rgb(153, 0, 255)"></option>
+                            <option value="rgb(255, 0, 255)"></option>
+                            <option value="rgb(0, 153, 255)"></option>
+                            <option value="rgb(0, 255, 255)"></option>
+                        </select>
+                        <select class="ql-background">
+                            <option value="rgb(25, 25, 25)"></option>
+                            <option value="rgb(153, 153, 153)"></option>
+                            <option value="rgb(255, 255, 255)"></option>
+                            
+                            <option value="rgb(255, 0, 0)"></option>
+                            <option value="rgb(255, 153, 153)"></option>
+                            <option value="rgb(255, 153, 0)"></option>
+                            <option value="rgb(255, 255, 0)"></option>
+                            <option value="rgb(255, 0, 153)"></option>
+                            <option value="rgb(255, 0, 255)"></option>
+
+                            <option value="rgb(0, 255, 0)"></option>
+                            <option value="rgb(153, 255, 153)"></option>
+                            <option value="rgb(153, 255, 0)"></option>
+                            <option value="rgb(255, 255, 0)"></option>
+                            <option value="rgb(0, 255, 153)"></option>
+                            <option value="rgb(0, 255, 255)"></option>
+
+                            <option value="rgb(0, 0, 255)"></option>
+                            <option value="rgb(153, 153, 255)"></option>
+                            <option value="rgb(153, 0, 255)"></option>
+                            <option value="rgb(255, 0, 255)"></option>
+                            <option value="rgb(0, 153, 255)"></option>
+                            <option value="rgb(0, 255, 255)"></option>
+                        </select>
+                    </div>
+                    <!-- Add format buttons -->
+                    <div class="ql-formats mr-3">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div id="editor" class="note-textbox note-input flex-grow-1">
+                <p>Write Something New Here</p>
+            </div>
+        </div>
+    </div>
+</div>
