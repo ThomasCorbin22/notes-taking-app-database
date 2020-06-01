@@ -9,6 +9,7 @@
     "express-basic-auth": "^1.2.0",
     "express-handlebars": "^4.0.4",
     "fs": "0.0.1-security",
+    "https": "^1.0.0",
     "jest": "^26.0.1",
     "knex": "^0.21.1",
     "pg": "^8.2.1"
