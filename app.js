@@ -3,6 +3,7 @@ const express = require('express');
 const basicAuth = require('express-basic-auth')
 const hb = require('express-handlebars');
 const bodyParser = require('body-parser')
+const https = require('https');
 
 const app = express();
 
@@ -51,8 +52,12 @@ app.get('/', (req, res) => {
 app.use("/notes", new NoteRouter(noteService).route());
 
 // Listen to a port
-app.listen(port, () => {
-    console.log(`App is listening to port ${port}`);
-});
+const options = {
+    cert: fs.readFileSync('./localhost.crt'),
+    key: fs.readFileSync('./localhost.key')
+};
+
+console.log("Application listening to port 8080");
+https.createServer(options, app).listen(port);
 
 module.exports = app
