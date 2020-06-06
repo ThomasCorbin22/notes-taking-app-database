@@ -4,7 +4,7 @@ let noteNumber
 // On load, get the current notes and display them
 $(() => {
     axios({
-        url: '/notes',
+        url: '/app-01/notes',
         method: 'get'
     })
     .then((res) => {
@@ -26,7 +26,7 @@ $(() => {
 $('#delete').click(() => {
     if (noteNumber > 1){
         axios({
-            url: '/notes',
+            url: '/app-01/notes',
             method: 'DELETE',
             data: { 'index': index }
         })
@@ -47,7 +47,7 @@ $('#delete').click(() => {
     }
     else if (noteNumber <= 1) {
         axios({
-            url: '/notes',
+            url: '/app-01/notes',
             method: 'PUT',
             data: {
                 'title': 'New Note',
@@ -71,7 +71,7 @@ $('#delete').click(() => {
 // On any click of the save button send a PUT request with the id and new note information
 $('#save').click(() => {
     axios({
-        url: '/notes',
+        url: '/app-01/notes',
         method: 'PUT',
         data: {
             'title': $('#main-title').val(),
@@ -95,7 +95,7 @@ $('#save').click(() => {
 // On click of the add note button, create a new blank note for using
 $('#addNote').click(() => {
     axios({
-        url: '/notes',
+        url: '/app-01/notes',
         method: 'POST',
         data: {
             'title': 'New Note',
@@ -197,7 +197,7 @@ function getNote() {
         }
 
         axios({
-            url: '/notes',
+            url: '/app-01/notes',
             method: 'GET'
         })
         .then((res) => {

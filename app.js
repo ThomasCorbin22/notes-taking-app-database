@@ -14,7 +14,7 @@ const NoteService = require('./Service/NoteService.js')
 const NoteRouter = require('./Router/NoteRouter.js')
 
 // Set up port
-const port = 8080
+const port = 8081
 
 // Set up basic authentication
 app.use(basicAuth({
@@ -38,7 +38,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get('/app-01', (req, res) => {
     noteService.listNotes(req.auth.user)
         .then((data) => {
             res.render('index', {
@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 });
 
 // Route any requests going to /notes to our NoteRouter class
-app.use("/notes", new NoteRouter(noteService).route());
+app.use("/app-01/notes", new NoteRouter(noteService).route());
 
 // Listen to a port
 const options = {
