@@ -32,7 +32,7 @@ app.engine('handlebars', hb({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Set up static files
-app.use(express.static("public"));
+app.use('/app-02', express.static('public'))
 
 // Set up body parsers
 app.use(bodyParser.urlencoded({ extended: false }));
